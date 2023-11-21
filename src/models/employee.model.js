@@ -45,7 +45,7 @@ Employee.findById = function (id,result) {
 
 //query all entry
 Employee.findAll = function (result) {
-    dbConn.query("Select * from employees", function (err, res){
+    dbConn.query("Select * from employees where is_deleted = 0", function (err, res){
         if(err) {
             console.log("error: ", err);
             result(null, err);
