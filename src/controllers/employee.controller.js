@@ -38,9 +38,9 @@ exports.findById = function(req, res) {
         if (err){ 
             res.send(err);
         }
-        res.join({status: 200, data: employee});
+        res.json({status: 200, data: employee});
     });
-}
+};
 
 //controller code for updating a single entry from the DB
 exports.update = function(req, res){
